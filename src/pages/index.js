@@ -1,11 +1,10 @@
 import React from "react"
-import NavBar from "../components/NavBar"
+import Layout from "../components/Layout/Layout"
 
 export default function Home() {
   return (
-    <div>
-      <NavBar tabs={["experience", "projects", "about", "fun"]} />
-      Hello world!
-    </div>
+    <Layout>
+      <h1>Hi! My name is Helena Chi, and I'm a software developer.</h1>
+    </Layout>
   )
 }
