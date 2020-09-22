@@ -1,6 +1,7 @@
 import React from "react"
 import NavBar from "../NavBar/NavBar"
 import Footer from "../Footer/Footer"
+
 import EmailIcon from "../../../public/images/email_icon.png"
 import LinkedinIcon from "../../../public/images/linkedin_icon.png"
 import GithubIcon from "../../../public/images/github_icon.png"
@@ -35,9 +36,5 @@ function Layout({ children }) {
     </div>
   )
 }
-
-// Layout.children = {
-//   experiences: PropTypes.array,
-// }
 
 export default Layout
