@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "./Button.js";
+import { Button, Pane, Text, majorScale, CrossIcon, MenuIcon } from "evergreen-ui";
 import "./Navbar.css";
 
 function Navbar() {
@@ -28,13 +28,13 @@ function Navbar() {
   return (
     <>
       <nav className="navbar">
-        <div className="navbar-container">
+        <Pane className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            Helena Chi <i className="fab fa-typo3"></i>
+            Helena Chi
           </Link>
-          <div className="menu-icon" onClick={handleClick}>
-            <i className={ click ? "fas fa-times" : "fas fa-bars" } />
-          </div>
+          <Pane className="menu-icon" onClick={handleClick}>
+            { click ? <CrossIcon size={24} color="white" /> : <MenuIcon size={24} color="white" /> }
+          </Pane>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
               <Link to="/" className="nav-links" onClick={closeMobileMenu}>Home</Link>
@@ -49,8 +49,8 @@ function Navbar() {
               <Link to="/contact" className="nav-links-mobile" onClick={closeMobileMenu}>Contact Me</Link>
             </li>
           </ul>
-          {button && <Button buttonStyle="btn--outline">Contact Me</Button>}
-        </div>
+          { button && <Button>Contact Me</Button>}
+        </Pane>
       </nav>
     </>
   );
