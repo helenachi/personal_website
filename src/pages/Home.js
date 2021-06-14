@@ -1,13 +1,11 @@
 import React from "react";
-import { Pane} from "evergreen-ui";
-import "../App.css";
-import HeroSection from "../components/HeroSection"
+import { Pane, Heading, Text, Button } from "evergreen-ui";
+import "./Home.css";
 
 function Home() {
   return (
     <Pane>
-      <HeroSection/>
-      <p>this is my home page</p>
+      <Heading>Hi! My name is <Text color="orange">Helena Chi</Text>, and I'm a software developer.</Heading>
     </Pane>
   );
 }
